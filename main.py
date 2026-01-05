@@ -15,7 +15,7 @@ MAX_MARKETS = 120  # check more markets
 
 @st.cache_data(ttl=600)
 def get_kalshi_markets():
-    url = f"https://trading-api.kalshi.com/trade-api/v2/markets?status=open&limit={MAX_MARKETS}"
+  url = "https://api.elections.kalshi.com/trade-api/v2/markets?status=open&limit=100"
     try:
         r = requests.get(url, timeout=12)
         r.raise_for_status()
